@@ -1,20 +1,13 @@
-// ID Card Community System
+const member = {
+    name: "Musa Muhammad",
+    id: "CCG001",
+    position: "Member",
+    phone: "08000000000",
+    photo: "https://via.placeholder.com/120"
+};
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("idForm");
-
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const fullname = document.getElementById("fullname").value;
-            const community = document.getElementById("community").value;
-
-            alert(
-                "ID Card Generated Successfully!\n\n" +
-                "Name: " + fullname +
-                "\nCommunity: " + community
-            );
-        });
-    }
-});
+document.getElementById("name").textContent = member.name;
+document.getElementById("id").textContent = member.id;
+document.getElementById("position").textContent = member.position;
+document.getElementById("phone").textContent = member.phone;
+document.getElementById("photo").src = member.photo;
